@@ -18,7 +18,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: ${{ secrets.PGPASSWORD }}
+          POSTGRES_PASSWORD: ${{ SECRET.PGPASSWORD }}
           POSTGRES_DB: forumapi_test
 
           options: >-
@@ -46,9 +46,9 @@ jobs:
           PORT: 3000
           PGHOST: localhost
           PGPORT: 5432
-          PGUSER: ${{ secrets.PGUSER }}
-          PGPASSWORD: ${{ secrets.PGPASSWORD }}
+          PGUSER: ${{ SECRET.PGUSER }}
+          PGPASSWORD: ${{ SECRET.PGPASSWORD }}
           PGDATABASE: forumapi_test
-          ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
-          REFRESH_TOKEN_KEY: ${{ secrets.REFRESH_TOKEN_KEY}}
+          ACCESS_TOKEN_KEY: ${{ SECRET.ACCESS_TOKEN_KEY }}
+          REFRESH_TOKEN_KEY: ${{ SECRET.REFRESH_TOKEN_KEY}}
           ACCESS_TOKEN_AGE: 3600
