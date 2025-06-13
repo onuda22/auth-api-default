@@ -19,9 +19,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             bash -l -c '
-              echo $PATH &&
-              which npm &&
-              which pm2 &&
+              export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v18.20.8/bin &&
               cd ~/auth-api-default &&
               git pull origin master &&
               npm install &&
