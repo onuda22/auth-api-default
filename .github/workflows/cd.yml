@@ -24,5 +24,5 @@ jobs:
               git pull origin master &&
               npm install &&
               npm run migrate up &&
-              pm2 restart auth-api-default || pm2 start src/app.js --name auth-api-default
+              pm2 restart auth-api
             '
